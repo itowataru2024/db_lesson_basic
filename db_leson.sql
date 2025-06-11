@@ -50,16 +50,16 @@ SELECT * FROM people WHERE department_id IS NULL;
 UPDATE people SET department_id =1 WHERE department_id IS NULL;
 
 Q5
-SELECT * FROM people WHERE gender=1 ORDER BY age DESC;
+SELECT * FROM people WHERE gender=1 ORDER BY name,age DESC;
 
 Q6
-peopleテーブルのカラムである名前、メールアドレス、年齢を昇順で並び替えて、department_id = 1のレコードのみを取り出そうとしている。
+peopleテーブルのカラムである`name`, `email`, `age`を取得して、昇順でレコードをソートしようとしている。created_at列から `department_id` = 1の昇順でソートする。
 
 Q7
-SELECT*FROM people WHERE gender=2 AND age>=20 OR gender=1 AND age>=40;
+SELECT * FROM people WHERE gender=2 AND age>=20 OR gender=1 AND age>=40;
 
 Q8
-SELECT*FROM people WHERE department_id =1 ORDER BY age ASC;
+SELECT * FROM people WHERE department_id =1 ORDER BY age ASC;
 
 Q9
 SELECT AVG(age) AS average_age FROM people WHERE gender=2 AND department_id =2;
