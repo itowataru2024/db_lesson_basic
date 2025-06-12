@@ -53,13 +53,14 @@ Q5
 SELECT * FROM people WHERE gender=1 ORDER BY name,age DESC;
 
 Q6
-peopleテーブルのカラムである`name`, `email`, `age`を取得して、昇順でレコードをソートしようとしている。created_at列から `department_id` = 1の昇順でソートする。
+peopleテーブルで`name`, `email`, `age`カラムを取得し、`department_id` = 1 レコードを追加して
+'created_at'でソートする
 
 Q7
 SELECT * FROM people WHERE gender=2 AND age>=20 OR gender=1 AND age>=40;
 
 Q8
-SELECT * FROM people WHERE department_id =1 ORDER BY age ASC;
+SELECT name,age FROM people WHERE department_id = 1 ORDER BY age ASC;
 
 Q9
 SELECT AVG(age) AS average_age FROM people WHERE gender=2 AND department_id =2;
