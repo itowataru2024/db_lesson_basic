@@ -50,7 +50,7 @@ SELECT * FROM people WHERE department_id IS NULL;
 UPDATE people SET department_id =1 WHERE department_id IS NULL;
 
 Q5
-SELECT name,age FROM people WHERE department_id = 1 ORDER BY age ASC;
+SELECT name,age FROM people WHERE department_id = 1 ORDER BY age DESC;
 
 Q6
 peopleテーブルで`name`, `email`, `age`カラムを取得し、`department_id` = 1 レコードを追加して
