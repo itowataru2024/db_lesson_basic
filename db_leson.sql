@@ -50,7 +50,7 @@ SELECT * FROM people WHERE department_id IS NULL;
 UPDATE people SET department_id =1 WHERE department_id IS NULL;
 
 Q5
-SELECT * FROM people WHERE gender=1 ORDER BY name,age DESC;
+SELECT name,age FROM people WHERE department_id = 1 ORDER BY age ASC;
 
 Q6
 peopleテーブルで`name`, `email`, `age`カラムを取得し、`department_id` = 1 レコードを追加して
@@ -60,7 +60,7 @@ Q7
 SELECT * FROM people WHERE gender=2 AND age>=20 OR gender=1 AND age>=40;
 
 Q8
-SELECT name,age FROM people WHERE department_id = 1 ORDER BY age ASC;
+SELECT * FROM people WHERE department_id =1 ORDER BY age ASC;
 
 Q9
 SELECT AVG(age) AS average_age FROM people WHERE gender=2 AND department_id =2;
