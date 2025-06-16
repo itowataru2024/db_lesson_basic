@@ -50,22 +50,20 @@ SELECT * FROM people WHERE department_id IS NULL;
 UPDATE people SET department_id =1 WHERE department_id IS NULL;
 
 Q5
-SELECT * FROM people WHERE gender=1 ORDER BY age DESC;
+SELECT name,age FROM people WHERE department_id = 1 ORDER BY age DESC;
 
 Q6
-peopleテーブルのカラムである名前、メールアドレス、年齢を昇順で並び替えて、department_id = 1のレコードのみを取り出そうとしている。
+peopleテーブルで`name`, `email`, `age`カラムを取得し、`department_id` = 1 レコードを追加して
+'created_at'でソートする
 
 Q7
-SELECT*FROM people WHERE gender=2 AND age>=20 OR gender=1 AND age>=40;
+SELECT * FROM people WHERE gender=2 AND age>=20 OR gender=1 AND age>=40;
 
 Q8
-SELECT*FROM people WHERE department_id =1 ORDER BY age ASC;
+SELECT * FROM people WHERE department_id =1 ORDER BY age ASC;
 
 Q9
 SELECT AVG(age) AS average_age FROM people WHERE gender=2 AND department_id =2;
 
 Q10
 SELECT people.name,departments.name,reports.content FROM people INNER JOIN reports ON people.person_id = reports.person_id INNER JOIN departments ON people.department_id = departments.department_id WHERE content IS NOT NULL;
-
-Q11
-SELECT people.name,reports.content FROM people LEFT OUTER JOIN reports ON people.person_id =reports. person_id WHERE content IS NULL;
